@@ -13,15 +13,13 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback(body.error.message, undefined)
         } else {
-            callback(undefined, `=>Today:
-            -${body.current.condition.text}.
-            -It's currently ${body.current.temp_c}\u2103.
+            callback(undefined, `Today:
+            -It's currently ${body.current.condition.text}.
+            -Now is ${body.current.temp_c}\u2103.
             -It feels like ${body.current.feelslike_c}\u2103.
-            =>Tomorrow:
-            -Max: ${body.forecast.forecastday[1].day.maxtemp_c}\u2103.-Min: ${body.forecast.forecastday[1].day.mintemp_c}\u2103`)
-            // callback(undefined, '=>Tomorrow: -Max: ' + '\n' +
-            // body.forecast.forecastday[1].day.maxtemp_c + '\u2103.' + 
-            // '-Min: ' + body.forecast.forecastday[1].day.mintemp_c + '\u2103')
+            Tomorrow:
+            -Max: ${body.forecast.forecastday[1].day.maxtemp_c}\u2103.
+            -Min: ${body.forecast.forecastday[1].day.mintemp_c}\u2103`)
         }
     })
 }
