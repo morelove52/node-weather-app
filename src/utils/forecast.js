@@ -19,7 +19,7 @@ const forecast = (latitude, longitude, callback) => {
             -It feels like ${body.current.feelslike_c}\u2103.
             Tomorrow:
             -Max: ${body.forecast.forecastday[1].day.maxtemp_c}\u2103.
-            -Min: ${body.forecast.forecastday[1].day.mintemp_c}\u2103`)
+            -Min: ${body.forecast.forecastday[1].day.mintemp_c}\u2103`.
         }
     })
 }
